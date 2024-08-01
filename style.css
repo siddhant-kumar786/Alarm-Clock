@@ -109,17 +109,34 @@ button{
 
 #setAlarmOption{
     width: 40vw;
-    height: 29vw;
+    height: 25vw;
     background-color: #5F5F5F !important;
     color: #eee !important;
     position: absolute;
-    top: 8vw;
+    top: -33vw;
     left: 31vw;
     flex-direction: column;
     padding: 3vw;
     display: none;
     border-radius: 13px;
 }
+.addAnimation{
+    animation: fall 2s ease-out forwards;
+}
+@keyframes fall {
+    0% {
+        top: -100px;
+    }
+    50% {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    100% {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
 #timeSelect{
     display: flex;
     flex-wrap: wrap;
