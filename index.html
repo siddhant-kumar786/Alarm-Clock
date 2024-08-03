@@ -17,38 +17,33 @@
     </nav>
     <div id="maincontainer">
         <div id="clockOption">
-            <div class="one first">
+            <div class="one two first">
                 <i class="fa-regular fa-clock"></i>
-                <div id = "alarmCalc" class="timer">Alarm Clock</div>
+                <div id="alarmCalc" class="timer">Alarm Clock</div>
             </div>
-            <div class="one two">
+            <div class="one second">
                 <i class="fa-regular fa-clock"></i>
-                <div id = "TimerCalc" class="timer">Timer</div>
+                <div id="TimerCalc" class="timer">Timer</div>
             </div>
-            <div class="one two">
+            <div class="one third">
                 <i class="fa-solid fa-stopwatch"></i>
-            <div id = "StopWatchCalc" class="timer">StopWatch</div>
-            </div>
-            <div class="one two">
-                <i class="fa-regular fa-clock"></i>
-                <div id = "TimeCalc" class="timer">Time</div>
-            </div>
-            
-            
-        </div>
-        <div id="content">
-           <div id="showTime"></div>
-            <div id="showDate"></div>
-            <button id="setalarm">Set Alarm</button> 
-            
-            <div id="afterAlarmSet">
-                <h2>Alarm</h2>
-                <div class="setTime"></div>
-                <button id="stop">STOP</button>
+                <div id="StopWatchCalc" class="timer">StopWatch</div>
             </div>
         </div>
-        <div id="setAlarmOption" class="addAnimation">
-                 <h1>Edit Alarm</h1>
+        <div id="alarmclock">
+            <div id="content">
+                <div id="showTime"></div>
+                <div id="showDate"></div>
+                <button id="setalarm">Set Alarm</button>
+
+                <div id="afterAlarmSet">
+                    <h2>Alarm</h2>
+                    <div class="setTime"></div>
+                    <button id="stop">STOP</button>
+                </div>
+            </div>
+            <div id="setAlarmOption" class="addAnimation">
+                <h1>Edit Alarm</h1>
                 <div id="timeSelect">
                     <label for="">Hours</label><br>
                     <select name="" id="Hours">Hours
@@ -149,16 +144,223 @@
                         <option value="3">Soothing Alarm</option>
                         <option value="4">Soothing Alarm</option>
                         <option value="5">Soothing Alarm</option>
-                        </select>
+                    </select>
                 </div>
 
                 <button id="set">
                     Set
                 </button>
 
+            </div>
         </div>
-        
+        <div id="clocktimer">
+            <div id="timerDuration">
+                <div class="timerHours">00</div>
+                <div>:</div>
+                <div class="timerMinutes">00</div>
+                <div>:</div>
+                <div class="timerSeconds">00</div>
+            </div>
+            <div id="timerButtons">
+                <button class="editTimer">Edit Timer</button>
+                <button id="start">Start</button>
+            </div>
+            <div id="setTimerOption" class="addAnimation">
+                <h1>Edit Timer</h1>
+                <div id="timeSelectTimer">
+                    <label for="">Hours</label><br>
+                    <select name="" id="setimerHours">Hours
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                    </select>
+                    <label for="">Minutes</label><br>
+                    <select name="" id="setimerMinutes">Minutes
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                        <option value="51">51</option>
+                        <option value="52">52</option>
+                        <option value="53">53</option>
+                        <option value="54">54</option>
+                        <option value="55">55</option>
+                        <option value="56">56</option>
+                        <option value="57">57</option>
+                        <option value="58">58</option>
+                        <option value="59">59</option>
+                    </select>
+
+                    <label for="">Seconds</label><br>
+                    <select name="" id="setimerSeconds">Seconds
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                        <option value="51">51</option>
+                        <option value="52">52</option>
+                        <option value="53">53</option>
+                        <option value="54">54</option>
+                        <option value="55">55</option>
+                        <option value="56">56</option>
+                        <option value="57">57</option>
+                        <option value="58">58</option>
+                        <option value="59">59</option>
+                    </select>
+                </div>
+
+                <div id="selectTimerSong">
+                    <label for="">Select Song</label>
+                    <select name="" id="timersong">
+                        <option value="1">Soothing Alarm</option>
+                        <option value="2">Soothing Alarm</option>
+                        <option value="3">Soothing Alarm</option>
+                        <option value="4">Soothing Alarm</option>
+                        <option value="5">Soothing Alarm</option>
+                    </select>
+                </div>
+
+                <button id="settimer">
+                    Set
+                </button>
+
+            </div>
+        </div>
+
+
+
+        <div id="StopWatch">
+            <div id="stopwatchtime">
+                <div class="timerHours">00</div>
+                <div>:</div>
+                <div class="timerMinutes">00</div>
+                <div>:</div>
+                <div class="timerSeconds">00</div>
+            </div>
+            <div id="stopWatchbuttons">
+                <button class="resetStopwatch">Reset</button>
+                <button id="startStopwatch">Start</button>
+            </div>
+        </div>
+
     </div>
 </body>
 <script src="script.js"></script>
+<script src="script2.js"></script>
+<script src="script3.js"></script>
+
 </html>

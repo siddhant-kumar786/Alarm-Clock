@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Playwrite+BE+VLG:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Playwrite+BE+VLG:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Playwrite+BE+VLG:wght@100..400&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -65,11 +66,12 @@ nav{
     background-color: white;
 }
 
-.two:hover{
+.one:hover{
     background-color: #afaeaef3;
 }
-.two:visited{
+.two{
     background-color: white;
+    border: 2px solid red;
 }
 #content{
     display: flex;
@@ -89,7 +91,7 @@ nav{
 #showTime{
     color: #FF9500 !important;
     font-size: 7vw;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Orbitron", sans-serif;
 }
 #showDate{
         color: #FF9500 !important;
@@ -217,4 +219,84 @@ h2{
 }
 .opacityset{
     opacity: 0.5;
+}
+
+
+#alarmclock{
+    display: none;
+}
+/* timer CSS */
+
+  #clocktimer{
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+    width: 93vw;
+    height: 96vh;
+    position: absolute;
+    top: 4vw;
+    left: 7vw;
+
+    background-color: black;
+}
+
+#timerDuration
+{
+    display: flex;
+    
+    color: #FF9500 !important;
+    font-size: 7vw;
+    font-family: "Orbitron", sans-serif;
+}
+
+#setTimerOption{
+    display: flex;
+    width: 40vw;
+    height: 27vw;
+    background-color: #5F5F5F !important;
+    color: #eeeeee !important;
+    position: absolute;
+    top: -33vw;
+    left: 28vw;
+    flex-direction: column;
+    padding: 3vw;
+     display: none; 
+    border-radius: 13px;
+}
+#settimer{
+    align-self: center;
+}
+#timeSelectTimer{
+    display: flex;
+    flex-wrap: wrap;
+    
+}  
+
+
+/* Stopwatch css */
+
+#StopWatch{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+    width: 93vw;
+    height: 96vh;
+    position: absolute;
+    top: 4vw;
+    left: 7vw;
+
+    background-color: black;
+}
+#stopwatchtime{
+    display: flex;
+    
+    color: #FF9500 !important;
+    font-size: 7vw;
+    font-family: "Orbitron", sans-serif;
 }

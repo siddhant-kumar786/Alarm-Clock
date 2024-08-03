@@ -2,46 +2,36 @@ let string = "";
 let dateString = "";
 let showTime = document.getElementById("showTime");
 let showDate = document.getElementById("showDate");
-let m;
+let alarmClkBtn = document.querySelector('.first');
 
-// m.play();
-
-// show date and time on the screen
 setInterval(() => {
     d = new Date();
     htime = d.getHours();
     day = d.getDate();
-    dateString += day;
-    dateString += "/";
-    string += htime;
-    string += ": "
+    dateString+=day;
+    dateString+="/";
+    string+=htime;
+    string+=": " 
     mtime = d.getMinutes();
     months = d.getMonth();
-    dateString += months;
-    dateString += "/";
+    dateString+=months;
+    dateString+="/";
 
-    string += mtime;
-    string += ": ";
+    string+=mtime;
+    string+=": ";
     stime = d.getSeconds();
     year = d.getFullYear();
-    dateString += year;
-    string += stime;
+    dateString+=year;
+    string+=stime;
     showTime.innerHTML = string;
     showDate.innerHTML = dateString;
     string = "";
-    dateString = "";
+    dateString ="";
 
 
 }, 1000);
 
-//select the song
-
-
-
-
-
-
-//Event listeners
+// Add or remove alarm
 let setAlarm = document.getElementById('setalarm');
 let fixedAlarm = document.getElementById('set');
 let content = document.getElementById('content');
@@ -52,85 +42,87 @@ let stopAlarmbtn = document.getElementById('stop');
 let mode = document.querySelector('.mode');
 
 let navbar = document.querySelector('nav');
-setAlarm.addEventListener('click', () => {
+setAlarm.addEventListener('click', ()=>{
     content.classList.add('opacityset');
     setAlarmOption.style.display = "flex";
-    setAlarm.style.display = "none";
+    setAlarm.style.display = "none";  
+})
+alarmClkBtn.addEventListener('click', ()=>{
+    document.getElementById('clocktimer').style.display = "none";
+    document.getElementById('alarmclock').style.display = "flex";
 })
 
-fixedAlarm.addEventListener('click', () => {
+fixedAlarm.addEventListener('click', ()=>{
     content.style.display = "flex";
     setAlarmOption.style.display = "none";
-    afterAlarmSet.style.display = "flex";
+    afterAlarmSet.style.display ="flex";
     setAlarm.style.display = "none";
     content.style.backgroundColor = "#4e4e54";
     content.classList.remove('opacityset');
     getOptions();
+
 })
 
-stopAlarmbtn.addEventListener('click', () => {
+stopAlarmbtn.addEventListener('click', ()=>{
     afterAlarmSet.style.display = "none";
     content.style.backgroundColor = "black";
     setAlarm.style.display = "flex";
     clearInterval(timerId);
     m.pause();
-})
-let turn = 0;
-mode.addEventListener('click', () => {
 
-    if (turn == 0) {
+})
+let darkmode = true;
+mode.addEventListener('click', () => {
+    if (darkmode) {
         navbar.style.backgroundColor = "#007abc";
         content.style.backgroundColor = "white";
-        turn = 1;
-    }
-    else {
+        document.getElementById('clocktimer').style.backgroundColor = "white";
+        darkmode = false;
+    } else {
         navbar.style.backgroundColor = "#4e4e4e";
         content.style.backgroundColor = "black";
-        turn = 0;
+        document.getElementById('clocktimer').style.backgroundColor = "black";
+        darkmode = true;
     }
-})
+});
+
+
 
 let settimeAlarm = document.querySelector('.setTime');
 let selectHours = document.querySelector('#Hours');
 let selectMinutes = document.querySelector('#Minutes');
-let output, output1;
-function getOptions() {
+let output, output1, m;
+function getOptions()
+{
     output = selectHours.value;
     settimeAlarm.innerHTML = output;
     settimeAlarm.innerHTML += ': '
 
-
+    
     output1 = selectMinutes.value;
     settimeAlarm.innerHTML += output1;
-    settimeAlarm.innerHTML += " ";
 
-    let songName ="alarm";
-    let song = document.getElementById('song');
-    songName+=song.value;
-    m = new Audio(songName + ".mp3");
+let songName ="alarm";
+let song = document.getElementById('song');
+songName+=song.value;
+m = new Audio(songName + ".mp3");
 }
+
 
 // alarm starts if the time completed
 let alarmRing = false;
 function playAlarmifTimeEnd() {
-    let d = new Date();
-    if ((output == d.getHours() && output1 == d.getMinutes()) || alarmRing) {
-        alarmRing = true;
-        m.play();
-    }
+let d = new Date();
+if ((output == d.getHours() && output1 == d.getMinutes()) || alarmRing) {
+    alarmRing = true;
+    m.play();
+}
 }
 
 let timerId = setInterval(() => {
     playAlarmifTimeEnd();  
 }, 1000);
 
-
-
-
-
-
-
-
-
+// timer javascript code
 
 
