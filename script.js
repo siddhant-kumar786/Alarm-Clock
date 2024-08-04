@@ -50,6 +50,7 @@ setAlarm.addEventListener('click', ()=>{
 alarmClkBtn.addEventListener('click', ()=>{
     document.getElementById('clocktimer').style.display = "none";
     document.getElementById('alarmclock').style.display = "flex";
+    document.getElementById('StopWatch').style.display = "none";
 })
 
 fixedAlarm.addEventListener('click', ()=>{
@@ -77,11 +78,13 @@ mode.addEventListener('click', () => {
         navbar.style.backgroundColor = "#007abc";
         content.style.backgroundColor = "white";
         document.getElementById('clocktimer').style.backgroundColor = "white";
+        document.getElementById('StopWatch').style.backgroundColor = "white";
         darkmode = false;
     } else {
         navbar.style.backgroundColor = "#4e4e4e";
         content.style.backgroundColor = "black";
         document.getElementById('clocktimer').style.backgroundColor = "black";
+        document.getElementById('StopWatch').style.backgroundColor = "black";
         darkmode = true;
     }
 });

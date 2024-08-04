@@ -4,6 +4,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 nav{
     display: flex;
@@ -35,13 +36,13 @@ nav{
 {
     display: flex;
     width: 100vw;
-    /* height: 265vh; */
+    min-height: 100vh;
 
 }
 #clockOption{
 
     width: 7vw;
-    height: 91vh;
+    min-height: 100vh;
     position: fixed;
     z-index: 2;
     top: 4vw;
@@ -71,7 +72,7 @@ nav{
 }
 .two{
     background-color: white;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 #content{
     display: flex;
@@ -84,8 +85,6 @@ nav{
     position: absolute;
     top: 4vw;
     left: 7vw;
-    /* display: none; */
-    /* z-index: 2; */
     background-color: black;
 }
 #showTime{
@@ -110,8 +109,8 @@ button{
 }   
 
 #setAlarmOption{
-    width: 40vw;
-    height: 25vw;
+    width: 42vw;
+    height: 32vw;
     background-color: #5F5F5F !important;
     color: #eee !important;
     position: absolute;
@@ -222,9 +221,7 @@ h2{
 }
 
 
-#alarmclock{
-    display: none;
-}
+
 /* timer CSS */
 
   #clocktimer{
@@ -233,7 +230,7 @@ h2{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 93vw;
     height: 96vh;
     position: absolute;
@@ -255,11 +252,11 @@ h2{
 #setTimerOption{
     display: flex;
     width: 40vw;
-    height: 27vw;
+    height: 31vw;
     background-color: #5F5F5F !important;
     color: #eeeeee !important;
     position: absolute;
-    top: -33vw;
+    top: -30vw;
     left: 28vw;
     flex-direction: column;
     padding: 3vw;
@@ -279,19 +276,25 @@ h2{
 /* Stopwatch css */
 
 #StopWatch{
-    /* display: none; */
-    display: flex;
+    display: none;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 93vw;
-    height: 96vh;
+    min-height: 96vh;
     position: absolute;
     top: 4vw;
     left: 7vw;
 
     background-color: black;
+}
+.milliSeconds{
+    font-size: 4vw;
+    align-self:self-end;
+    width: 3vw;
+
 }
 #stopwatchtime{
     display: flex;
@@ -299,4 +302,55 @@ h2{
     color: #FF9500 !important;
     font-size: 7vw;
     font-family: "Orbitron", sans-serif;
+}
+
+.stopStopWatch{
+    background-color: red;
+
+    display: none;
+}
+.lapStopWatch{
+    background-color: purple;
+
+    display: none;
+}
+
+#lapStopWatchCont{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vw;
+    width: 21vw;
+    min-height: 3vw;
+}
+
+.lapTime{
+    color: #FF9500 !important;
+    font-size: 1.5vw;
+    font-family: sans-serif;
+    margin-top: 1vw;
+    background-color: #29160e;
+    width: 10vw;
+    height: 2vw;
+
+    border: 2px solid #e86464;
+    border-radius: 12%;
+}
+
+
+/* Footers */
+ 
+#footer{
+    font-size: 35px;
+    color: white;
+     width: 93vw;
+    /* height: 96vh;  */
+    border: 2px solid red;
+    padding: 2vw;
+    position: absolute;
+    /* top: 101vh; */
+    left: 7vw; 
+    background-color: rgb(6 6 6);
 }

@@ -18,12 +18,21 @@ let setimerSong;
 let songPlayed = false;
 
 editTimer.addEventListener('click', () => {
-    setTimerOption.style.display = "flex";
+
+    if(songPlayed == true)
+    {
+        alert("Please Stop the song first");
+    }
+    else{
+        setTimerOption.style.display = "flex";
     clearInterval(timerIdOfTimer);
+    }
+    
 });
 timerSeBtn.addEventListener('click', ()=>{
     document.getElementById('alarmclock').style.display = "none";
     document.getElementById('clocktimer').style.display = "flex";
+    document.getElementById('StopWatch').style.display = "none";
     
 })
 
